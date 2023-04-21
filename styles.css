@@ -1,6 +1,310 @@
-#myVideo {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 100%;
+
+body {
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: "Outfit", arial, sans-serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 48px;
+  margin: 0 0 0px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+
+ul {
+  color: #ffffff;
+}
+
+.info-list{
+  font-size: 16px;
+}
+.line {
+  margin: 5px 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.invite-link {
+  text-decoration: underline;
+}
+.invite-link:hover {
+  opacity: 1.0;
+  transform: scale(1.1);
+}
+
+
+/* Header styles */
+header {
+  background-color: #000000;
+  /* padding: 20px; */
+  text-align: center;
+  opacity: 0.8;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 80px;
+  
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-brand {
+  vertical-align: middle;
+  padding-left: 100px;
+  opacity: 0.8;
+}
+
+.navbar-brand:hover {
+  opacity: 1.0;
+  transform: scale(1.1);
+  padding-left: 110px;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar {
+  padding-top: 15px;
+}
+.nav-link {
+  color: #ffffff;
+}
+.navbar-collapse {
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+/* Main content styles */
+main {
+  background-color: #000000;
+  padding: 40px;
+
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  color: #ffffff;
+
+  text-indent: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000000;
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 80px;
+}
+.footer-text {
+  padding-top: 20px;
+}
+
+.text-white {
+  color: #fff;
+  text-align: center;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icon-section {
+  display: flex;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+  opacity: 0.8;
+}
+
+.icon-circle:hover {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  transform: scale(1.1);
+  opacity: 1.0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  flex: 1;
+  padding: 20px;
+}
+
+.col-md-6:nth-child(odd) {
+  border-right: 1px solid #ddd;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6:nth-child(odd) {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* oh, you're on a mobile device? */
+@media (max-width: 600px) {
+  body {
+    background-color: white;
+    color: white;
+    /* deal with it */
+    /* ⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⣿⣷⣶⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⡟⠁⣰⣿⣿⣿⡿⠿⠻⠿⣿⣿⣿⣿⣧⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠏⠀⣴⣿⣿⣿⠉⠀⠀⠀⠀⠀⠈⢻⣿⣿⣇⠀⠀⠀
+⠀⠀⠀⠀⢀⣠⣼⣿⣿⡏⠀⢠⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⡀⠀⠀
+⠀⠀⠀⣰⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀
+⠀⠀⢰⣿⣿⡿⣿⣿⣿⡇⠀⠘⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣸⣿⣿⣿⠁⠀⠀
+⠀⠀⣿⣿⣿⠁⣿⣿⣿⡇⠀⠀⠻⣿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⣿⣿⠃⠀⠀⠀
+⠀⢰⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+⠀⢸⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉⢉⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⢸⣿⣿⣇⠀⣿⣿⣿⠀⠀⠀⠀⠀⢀⣤⣤⣤⡀⠀⠀⢸⣿⣿⣿⣷⣦⠀⠀⠀
+⠀⠀⢻⣿⣿⣶⣿⣿⣿⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣦⡀⠀⠉⠉⠻⣿⣿⡇⠀⠀
+⠀⠀⠀⠛⠿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠈⠹⣿⣿⣇⣀⠀⣠⣾⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠁ */
+  }
 }
