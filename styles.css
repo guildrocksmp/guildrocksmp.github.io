@@ -335,15 +335,3 @@ body {
   background-size: cover;
   animation: slow-scroll 50s linear infinite alternate;
 }
-/* 
-@keyframes slow-scroll {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 0 100%; 
-  }
-  100% {
-    background-position: 0 0;
-  }
-} */
