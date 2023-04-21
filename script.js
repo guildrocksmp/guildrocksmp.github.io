@@ -1,18 +1,13 @@
-
-const path = './assets/slideshow/';
-const images = [
-    'image1.png',
-    'image2.png',
-    'image3.png',
-    'image4.png',
-];
-
-let currentIndex = 0;
-const heroImage = document.querySelector('.hero-image');
-
-function changeBackgroundImage() {
-    heroImage.style.backgroundImage = `url('${path}${images[currentIndex]}')`;
-    currentIndex = (currentIndex + 1) % images.length;
-}
-
-setInterval(changeBackgroundImage, 2000); 
+// Add a class to the body element when the user starts scrolling
+window.addEventListener('scroll', function() {
+    document.body.classList.add('scrolling');
+  });
+  
+  // Remove the class from the body element when the scrolling stops
+  var timeout;
+  window.addEventListener('scroll', function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      document.body.classList.remove('scrolling');
+    }, 100);
+  });

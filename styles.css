@@ -1,4 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
 
+}
 body {
   font-family: "Lato", sans-serif;
   font-family: "Open Sans", sans-serif;
@@ -59,24 +63,36 @@ a {
 }
 .invite-link:hover {
   opacity: 1.0;
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 80px;
   background-color: #333;
   color: white;
   z-index: 9999;
   position: fixed;
+  width: 100%; 
 }
 
+/*idk what happened here I'm not a full time web developer*/
+.header-left {
+  margin-top: 5px;
+  opacity: 0.8;
+  transform: scale(1.2);
+  transform-origin: right;
+}
 .header-left img {
   width: 40px;
   height: 40px;
-  margin-left: 10px;
+  margin-left: 100px;
+}
+.header-left:hover {
+  opacity: 1.0;
+  transform: scale(1.3);
 }
 
 .header-middle ul {
@@ -84,12 +100,12 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-grow: 1; 
+  justify-content: center; 
 }
-
 .header-middle li {
   margin: 0 10px;
 }
-
 .header-middle a {
   color: white;
   text-decoration: none;
@@ -98,78 +114,28 @@ header {
 .header-right img {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 50px;
 }
 
-/* Header styles */
-/*
-header {
-  background-color: #000000;
-  text-align: center;
-  opacity: 0.8;
-  margin-top: -20px;
-  margin-left: -20px;
-  margin-right: -20px;
-  height: 80px;
-  
-}
-
-header h1 {
-  font-size: 48px;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-nav {
+.header-icon {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-nav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.navbar {
-  padding-top: 15px;
-}
-
-.navbar-brand {
-  vertical-align: middle;
-  padding-left: 100px;
-  opacity: 0.8;
-}
-
-.navbar-brand:hover {
-  opacity: 1.0;
-  transform: scale(1.1);
-}
-
-.navbar-brand img {
+  align-items: center;
+  justify-content: center;
+  width: 50px;
   height: 50px;
+  border-radius: 30%;
+  transform: scale(1.2);
+
+  opacity: 0.8;
+}
+.header-icon:hover {
+  opacity: 1.0;
+  transform: scale(1.3);
 }
 
-.nav-link {
-  color: #ffffff;
+.icon-section {
+  display: flex;
 }
-.navbar-collapse {
-  padding-top: 10px;
-  padding-left: 50px;
-}*/
 
 /* Main content styles */
 main {
@@ -177,7 +143,7 @@ main {
   padding: 40px;
 
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: 1.0;
 }
 
 section {
@@ -202,9 +168,7 @@ footer {
   background-color: #000000;
   text-align: center;
   opacity: 0.8;
-  margin-bottom: -20px;
-  margin-left: -20px;
-  margin-right: -20px;
+
   height: 80px;
 }
 .footer-text {
@@ -265,7 +229,6 @@ a:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 20px;
 
   opacity: 0.8;
 }
@@ -321,27 +284,66 @@ a:hover {
   }
 }
 
-
-
 .hero-image {
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  z-index: 990;
 }
 
-.hero-text {
+.hero-content {
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: 96px;
+  opacity: 1.0;
+
+  text-shadow: 4px 4px #222222, 0 0 20px #222222;
+
+
+  z-index: 999;
 }
 
-.main-content {
-  margin-top: 100vh;
-  height: 2000px;
-  background-color: #f1f1f1;
+.hero-icon {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 1.0;
+
+  margin-top: 180px;
+  height: 120px;
+  width: 120px;
+
+  z-index: 999;
+
 }
+
+body {
+  background: url('./assets/slideshow/image4.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation: slow-scroll 50s linear infinite alternate;
+}
+/* 
+@keyframes slow-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 100%; 
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
